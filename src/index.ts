@@ -1,5 +1,5 @@
 import { Hono } from 'hono'
-import expenseRoutes from './routes/appRoutes'
+import { getExpenses, addExpense, deleteExpense } from "./controllers/app"
 
 const app = new Hono()
 
@@ -7,6 +7,8 @@ app.get('/expenzo', (c) => {
   return c.text('Hi from expenzo!')
 })
 
-app.route('/expenzo', expenseRoutes)
+app.get('/expenses', getExpenses)
+app.post('/expenses', addExpense)
+app.delete('/delete/:id', deleteExpense)
 
 export default app
