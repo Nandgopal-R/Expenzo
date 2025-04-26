@@ -3,7 +3,7 @@ import { getExpenses, addExpense, deleteExpense } from "./controllers/app"
 
 const app = new Hono()
 
-app.get('/expenzo', (c) => {
+app.get('/', (c) => {
   return c.text('Hi from expenzo!')
 })
 
