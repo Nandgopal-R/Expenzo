@@ -1,0 +1,11 @@
+meta {
+  name: Get All Expenses
+  type: http
+  seq: 1
+}
+
+get {
+  url: http://localhost:8787/expenzo/expenses
+  body: json
+  auth: inherit
+}

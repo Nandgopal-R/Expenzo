@@ -1,6 +1,7 @@
 {
   "$schema": "node_modules/wrangler/config-schema.json",
-  "name": "my-app",
+  "name": "expenzo",
+  "type": "javascript",
   "main": "src/index.ts",
   "compatibility_date": "2025-04-25"
   // "compatibility_flags": [

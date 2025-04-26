@@ -1,0 +1,20 @@
+meta {
+  name: Add Expenses
+  type: http
+  seq: 3
+}
+
+post {
+  url: http://localhost:8787/expenzo/expenses
+  body: json
+  auth: inherit
+}
+
+body:json {
+  {
+    "amount": 150,
+    "description": "Groceries",
+    "category": "Food"
+  }
+  
+}

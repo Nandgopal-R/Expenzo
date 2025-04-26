@@ -3,12 +3,16 @@
   "scripts": {
     "dev": "wrangler dev",
     "deploy": "wrangler deploy --minify",
-    "cf-typegen": "wrangler types --env-interface CloudflareBindings"
+    "cf-typegen": "wrangler types --env-interface CloudflareBindings",
+    "migrate": "sh -c 'goose -dir db/migrations postgres \"$DATABASE_URL\" up'",
+    "migrate:down": "sh -c 'goose -dir db/migrations postgres \"$DATABASE_URL\" down'"
   },
   "dependencies": {
+    "@neondatabase/serverless": "^1.0.0",
     "hono": "^4.7.7"
   },
   "devDependencies": {
+    "@cloudflare/workers-types": "^4.20250425.0",
     "wrangler": "^4.4.0"
   }
 }
